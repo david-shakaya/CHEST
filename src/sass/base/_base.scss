@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 16px;
+  display: inline-grid;
+}
+
+input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: 'Seymour One', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+// font-family: 'PT Sans', sans-serif;
+// font-family: 'Ruslan Display', cursive;
