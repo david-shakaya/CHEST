@@ -1,0 +1,50 @@
+.game-area {
+    overflow: hidden;
+  &__wrapper {
+      display: block;
+      background-image: url('../images/game-area-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100vw;
+      max-width: 1920px;
+      height: 100vh;
+      position: relative;
+  }
+
+  &__list {
+      background-image: url('../images/10-layers.png');
+      width: 513px;
+      height: 513px;
+      position: absolute;
+      top: 220px;
+      left: 386px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  &__item {
+      cursor: pointer;
+    background-image: url('../images/item-bg.png');
+    width: 166px;
+    height: 167px;
+    animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  }
+
+  @keyframes slidein {
+    0% {
+        transform: scale(0.9);
+
+    }
+
+    50% {
+        transform: scale(1);
+    }
+  
+    100% {
+        transform: scale(0.9);
+    }
+  }
+}
