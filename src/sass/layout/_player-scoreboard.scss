@@ -1,0 +1,46 @@
+.player-scoreboard {
+  position: absolute;
+  width: 273px;
+  height: 578px;
+  right: 391px;
+  top: 229px;
+
+  padding: 119px 23px 48px 23px;
+
+  &__text-rules {
+    color: #bab6b6;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 31px;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 35.95px;
+    text-transform: uppercase;
+  }
+
+  &__available,
+  &__quantity-game,
+  &__sum {
+    text-shadow: -4px 6px 3px rgba(31, 32, 32, 0.4);
+    color: #a3a09f;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 36px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
