@@ -1,8 +1,62 @@
 import './sass/main.scss';
+import refs from './js/refs';
+
+const price = 5;
+let gamesАvailable = 0;
+let gamesQuantity = 0;
+let sum = 0;
+
+// refs.gamesAvailable.textContent = gamesАvailable;
+
+
+refs.btnPlus.addEventListener('click', plusToQuantity);
+refs.btnMinus.addEventListener('click', minusFromQuantity);
+refs.btnBuy.addEventListener('click', buyedGames);
+
+function plusToQuantity() {
+  gamesQuantity += 1;
+  sum +=5;
+  renderQuantity()
+}
+
+function minusFromQuantity() {
+  if (gamesQuantity > 0) {
+    gamesQuantity -= 1;
+    sum -=5;
+    renderQuantity()
+  }
+  return;
+}
+
+function renderQuantity () {
+    refs.gamesQuantity.textContent = gamesQuantity;
+    refs.sum.textContent = sum;
+}
+
+function renderGamesAvailable () {
+    gamesАvailable += gamesQuantity;
+    refs.gamesAvailable.textContent = gamesАvailable;
+    console.log('gamesQuantity', gamesQuantity)
+    console.log(gamesАvailable)
+}
+
+
+function buyedGames () {
+    console.log(gamesАvailable)
+    renderGamesAvailable()
+    resetNumbers()
+    renderQuantity()    
+}
+
+
+function resetNumbers() {
+    gamesQuantity = 0;
+    sum = 0;
+}
 
 
 // import '../node_modules/basiclightbox/dist/basiclightbox.min.css';
-// import refs from './js/refs';
+
 // import { fetchImages, clearDom } from './js/apiService';
 // import '../node_modules/toastr/build/toastr.css';
 // import debounce from 'lodash.debounce';

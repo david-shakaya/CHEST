@@ -22,18 +22,28 @@
               <li class="game-area__item"></li>
               <li class="game-area__item"></li>
             </ul>
+            <button class="game-area__btn" type="button">Играть</button>
             <div class="player-scoreboard">
               <p class="player-scoreboard__text-rules">1 игра = 5 $</p>
               <div class="player-scoreboard__text-block1">
                 <p class="player-scoreboard__title">Вам доступно</p>
-                <p class="player-scoreboard__available">Игр:<span>0</span></p>
+                <p class="player-scoreboard__available">Игр:<span class="js-games-available">0</span></p>
               </div>
               <div class="player-scoreboard__text-block2">
                 <p class="player-scoreboard__title">Покупка:</p>
-                <p class="player-scoreboard__quantity-game">Игр:<span>0</span></p>
-                <p class="player-scoreboard__sum">Игр:<span>0</span></p>
+                <div class="player-scoreboard__quantity-game-wrapper">
+                  <p class="player-scoreboard__quantity-game-title"> Игр:</p>
+                  <span class="player-scoreboard__quantity-game js-quantity-game">0</span>
+                  <span class="player-scoreboard__btns-list">
+                    <button class="player-scoreboard__btn-plus js-btn-plus" type="button">></button>
+                    <button class="player-scoreboard__btn-minus js-btn-minus" type="button"><</button>
+                  </span>
+                </div>
+                <p class="player-scoreboard__sum-title">Сумма:<span class="player-scoreboard__sum js-sum">0</span></p>
               </div>
-             <button class="player-scoreboard__btn" type="button">Купить</button>
+              <button class="player-scoreboard__btn js-btn-buy" type="button">
+                Купить
+              </button>
             </div>
           </div>
         </div>

@@ -29,9 +29,20 @@
     text-transform: uppercase;
   }
 
+  &__quantity-game-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-plus,
+  &__btn-minus {
+    display: block;
+  }
+
   &__available,
   &__quantity-game,
-  &__sum {
+  &__sum,
+  &__quantity-game-title {
     text-shadow: -4px 6px 3px rgba(31, 32, 32, 0.4);
     color: #a3a09f;
     font-family: 'Seymour One', sans-serif;
