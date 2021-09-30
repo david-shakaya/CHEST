@@ -2,12 +2,14 @@
     overflow: hidden;
   &__wrapper {
       display: block;
+      position: relative;
       background-image: url('../images/game-area-bg.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       width: 1920px;
       height: 100vh;
-      position: relative;
+      max-height: 1080px;
+      
   }
 
   &__list {

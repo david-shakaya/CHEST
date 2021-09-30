@@ -1,11 +1,11 @@
 .player-scoreboard {
   position: absolute;
   width: 273px;
-  height: 578px;
+  height: 508px;
   right: 391px;
   top: 229px;
 
-  padding: 119px 23px 48px 23px;
+  padding: 102px 23px 48px 23px;
 
   &__text-rules {
     color: #bab6b6;
@@ -13,9 +13,10 @@
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
-    line-height: 31px;
+    line-height: 16px;
     font-style: normal;
     letter-spacing: normal;
+    margin-bottom: 45px;
   }
 
   &__title {
@@ -25,23 +26,26 @@
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
-    line-height: 35.95px;
-    text-transform: uppercase;
+    line-height: 21.95px;
   }
 
   &__quantity-game-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 21px;
   }
 
-  &__btn-plus,
-  &__btn-minus {
-    display: block;
+  &__available,
+  &__sum-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__available,
   &__quantity-game,
-  &__sum,
+  &__sum-title,
   &__quantity-game-title {
     text-shadow: -4px 6px 3px rgba(31, 32, 32, 0.4);
     color: #a3a09f;
@@ -50,8 +54,106 @@
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
-    line-height: 36px;
     text-align: left;
+  }
+
+  &__quantity-game,
+  &__sum,
+  &__available-number {
+    text-shadow: -4px 6px 3px rgba(31, 32, 32, 0.4);
+    color: #fec602;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+  }
+
+  &__quantity-game {
+    margin-right: 15px;
+  }
+
+  &__text-block1 {
+    margin-bottom: 67px;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-arrow {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 11px;
+    height: 6px;
+    cursor: pointer;
+    display: block;
+  }
+
+  &__btn-plus {
+    position: relative;
+    margin-bottom: 3px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-left: 1px #ffffff solid;
+      border-bottom: 1px #ffffff solid;
+      display: block;
+      transform: rotate(132deg);
+    }
+  }
+
+  &__btn-minus {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-left: 1px #ffffff solid;
+      border-bottom: 1px #ffffff solid;
+      display: block;
+      transform: rotate(315deg);
+    }
+    &--disabled {
+      opacity: 0.5;
+    }
+  }
+  
+  &__sum-icon {
+    text-shadow: -4px 6px 3px rgba(31, 32, 32, 0.4);
+    color: #959392;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
     text-transform: uppercase;
+  }
+
+  &__btn {
+    color: #52311b;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: normal;
+
+    background-image: url('../images/btn-bg-buy.png');
+    width: 228px;
+    height: 65px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
