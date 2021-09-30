@@ -34,6 +34,30 @@
   animation-iteration-count: infinite;
   }
 
+  &__btn {
+    position: absolute;
+    right: 744px;
+    top: 631px;
+
+    color: #52311b;
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: normal;
+    background-image: url(../images/btn-bg-play.png);
+    width: 228px;
+    height: 65px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+ 
+
+
   @keyframes slidein {
     0% {
         transform: scale(0.9);
