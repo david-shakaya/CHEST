@@ -1,37 +1,76 @@
 .game-area {
-    overflow: hidden;
+  overflow: hidden;
   &__wrapper {
-      display: block;
-      position: relative;
-      background-image: url('../images/game-area-bg.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 1920px;
-      height: 100vh;
-      max-height: 1080px;
-      
+    display: block;
+    position: relative;
+    background-image: url('../images/game-area-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 100vh;
+    max-height: 1080px;
   }
 
   &__list {
-      background-image: url('../images/10-layers.png');
-      width: 513px;
-      height: 513px;
-      position: absolute;
-      top: 220px;
-      left: 386px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    background-image: url('../images/10-layers.png');
+    width: 513px;
+    height: 513px;
+    position: absolute;
+    top: 220px;
+    left: 386px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
+  
+&__scale {
+  animation-delay: 0.250s;
+  animation-duration: 3s;
+  animation-name: scale;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
   &__item {
-      cursor: pointer;
+    cursor: pointer;
     background-image: url('../images/item-bg.png');
     width: 166px;
     height: 167px;
-    animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+
+    &--win {
+      transform: scale(1);
+      animation: openWin 400ms forwards;
+    }
+  }
+
+  @keyframes openWin {
+    
+    0% {
+      background-image: url('../images/item-bg.png')
+    }
+
+    50% {
+      background-image: url('../images/2.png')
+    }
+  
+    100% {
+      background-image: url('../images/3.png')
+    }
+    
   }
 
   &__btn {
@@ -55,21 +94,35 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
- 
 
-
-  @keyframes slidein {
-    0% {
-        transform: scale(0.9);
-
-    }
-
-    50% {
-        transform: scale(1);
-    }
-  
-    100% {
-        transform: scale(0.9);
-    }
+  &__wrapper-prompts-text {
+    position: absolute;
+    right: 708px;
+    top: 402px;
+    width: 303px;
+    height: 157px;
+    padding: 18px 20px;
   }
+
+  &__text-prompts {
+    color: #333333;
+font-family: 'Seymour One', sans-serif;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+font-style: normal;
+letter-spacing: normal;
+line-height: normal;
+  
+}
+  
+
+
+
+
+
+// .circle-01 {
+//  animation: shake-circle-01 .1s infinite alternate;
+// }
+
 }

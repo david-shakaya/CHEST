@@ -6,6 +6,12 @@
      btnMinus: document.querySelector('.js-btn-minus'),
      sum: document.querySelector('.js-sum'),
      btnBuy: document.querySelector('.js-btn-buy'),
+     wrapperText: document.querySelector('.prompts-text-js'),
+     btnStartGame: document.querySelector('.btn-start-game-js'),
+     items: document.querySelectorAll('.game-area-item-js'),
+     listItems: document.querySelector('.list-item-js'),
+     
+     
      
 }
 
