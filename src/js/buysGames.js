@@ -36,8 +36,6 @@ function minusFromQuantity() {
 function renderQuantity() {
   refs.gamesQuantity.textContent = state.gamesQuantity;
   refs.sum.innerHTML = `${state.sum} <span class="player-scoreboard__sum-icon">$</span>`;
-
-  // .player-scoreboard__btn
 }
 
 function renderGamesAvailable() {
@@ -66,8 +64,3 @@ function resetNumbers() {
 }
 
 export {renderGamesAvailable ,state};
-
-// import '../node_modules/basiclightbox/dist/basiclightbox.min.css';
-
-// import { fetchImages, clearDom } from './js/apiService';
-// import '../node_modules/toastr/build/toastr.css';

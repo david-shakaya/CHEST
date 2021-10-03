@@ -10,9 +10,6 @@
      btnStartGame: document.querySelector('.btn-start-game-js'),
      items: document.querySelectorAll('.game-area-item-js'),
      listItems: document.querySelector('.list-item-js'),
-     
-     
-     
 }
 
  export default refs

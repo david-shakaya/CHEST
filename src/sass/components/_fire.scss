@@ -1,0 +1,76 @@
+.fire-animation {
+    background-image: url('../images/1.png');
+    width: 1354px;
+    height: 1253px;
+    position: absolute;
+    display: block;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: -803px;
+    left: -507px;
+    opacity: 0.8;
+    animation: fire 1s infinite;
+
+    &::before{
+     content: '';   
+     background-image: url('../images/1.png');
+     width: 1131px;
+    height: 1043px;
+    position: absolute;
+    display: block;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 186px;
+    left: 160px;
+    opacity: 0.4;
+    animation: fire 1.5s infinite;
+  }
+  &::after{
+    content: '';   
+    background-image: url('../images/1.png');
+    width: 1177px;
+    height: 1081px;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 169px;
+    left: 69px;
+    opacity: 0.4;
+    animation: fire 1.5s infinite;
+ }
+}
+  
+  @keyframes fire {
+    10% {
+      background-image: url('../images/2-depositphotos-bgremover.png');
+    }
+  
+    25% {
+      background-image: url('../images/4-depositphotos-bgremover.png');
+    }
+  
+    35% {
+      background-image: url('../images/6-depositphotos-bgremover.png');
+    }
+  
+    45% {
+      background-image: url('../images/7-depositphotos-bgremover.png');
+    }
+  
+    60% {
+      background-image: url('../images/9-depositphotos-bgremover.png');
+    }
+    75% {
+      background-image: url('../images/10-depositphotos-bgremover.png');
+    }
+    85% {
+      background-image: url('../images/12-depositphotos-bgremover.png');
+    }
+    95% {
+      background-image: url('../images/13-depositphotos-bgremover.png');
+    }
+  }

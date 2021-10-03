@@ -2,7 +2,11 @@
 @import './utils/normalize';
 @import './utils/var';
 @import './base/base';
-@import './layout/container';
+
+@import './components/container';
+@import './components/modal';
+@import './components/fire';
+@import './components/head';
+
 @import './layout/game-area';
 @import './layout/player-scoreboard';
-@import './components/modal';

@@ -1,7 +1,6 @@
 import {state} from './buysGames'
 import refs from './refs'
 
-
 const textPromts = {
     game: `Поздравляем с покупкой игр(ы).Нажми кноку играть и выбери сундук!`,
     сhoice: 'Все верно, теперь выбери сундук',
