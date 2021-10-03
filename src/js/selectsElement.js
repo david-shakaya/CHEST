@@ -1,4 +1,7 @@
 import refs from './refs';
+import {showsTextPrompts, textPromts} from './showsTextPrompts';
+import instance from './openedModalWindow';
+import { clickStartGame } from './srartsGame';
 
 let win = false;
 
@@ -8,6 +11,11 @@ function selectElement() {
   function openBox(event) {
     if (event.target.nodeName === 'LI') {
       event.target.classList.add(returnsClassName());
+      refs.listItems.classList.add('game-area__overlay')
+      showsText()
+      instance().show()
+      const btn = document.querySelector('.modall-btn-js')
+      clickStartGame.click = false
     }
   }
 }
@@ -23,4 +31,11 @@ const returnsClassName = () => {
   return result;
 };
 
-export default selectElement;
+function showsText() {
+  if(win) {
+    showsTextPrompts(textPromts.win)
+  }
+  showsTextPrompts(textPromts.lose)
+}
+
+export {selectElement, win};

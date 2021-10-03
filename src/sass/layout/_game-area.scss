@@ -53,22 +53,22 @@
 
     &--win {
       transform: scale(1);
-      animation: openWin 400ms forwards;
+      animation: openWin 150ms forwards;
     }
   }
 
   @keyframes openWin {
     
     0% {
-      background-image: url('../images/item-bg.png')
+      background-image: url('../images/item-bg.png');
     }
 
     50% {
-      background-image: url('../images/2.png')
+      background-image: url('../images/2.png');
     }
   
     100% {
-      background-image: url('../images/3.png')
+      background-image: url('../images/3.png');
     }
     
   }
@@ -115,7 +115,15 @@ letter-spacing: normal;
 line-height: normal;
   
 }
-  
+
+&__overlay::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  z-index: 10;
+}
 
 
 

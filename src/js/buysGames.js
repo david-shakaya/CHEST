@@ -1,11 +1,12 @@
 import refs from './refs';
 import {showsTextPrompts, textPromts} from './showsTextPrompts'
-import startGame from './srartsGame'
+import {startGame} from './srartsGame'
 
 const state = {
   gamesАvailable: 0,
   gamesQuantity: 0,
   sum: 0,
+  startedGame:false,
 };
 
 refs.btnPlus.addEventListener('click', plusToQuantity);
@@ -48,7 +49,10 @@ function buyedGames() {
   if (state.gamesQuantity === 0) {
     return;
   }
-  startGame()
+  if(!state.startedGame){
+    startGame()
+    state.startedGame = true
+  }
   renderGamesAvailable();
   showsTextPrompts(textPromts.game)
   resetNumbers();
@@ -61,7 +65,7 @@ function resetNumbers() {
   state.sum = 0;
 }
 
-export default state;
+export {renderGamesAvailable ,state};
 
 // import '../node_modules/basiclightbox/dist/basiclightbox.min.css';
 
